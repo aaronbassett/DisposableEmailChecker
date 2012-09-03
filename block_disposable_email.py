@@ -1,31 +1,24 @@
-#!/usr/bin/env python
+from django.conf import settings
 import re
 import sys
 
 
-def chunk(l,n):
-    return (l[i:i+n] for i in xrange(0, len(l), n))
-
-
-def is_disposable_email(email):
-    emails = [line.strip() for line in open('domain-list.txt')]
-    
+class DisposableEmailChecker():
     """
-    Chunk it!
-    Regex parser doesn't deal with hundreds of groups
+    Check if an email is from a disposable
+    email service
     """
-    for email_group in chunk(emails, 20):
-        regex = "(.*" + ")|(.*".join(email_group) + ")"
-        if re.match(regex, email):
-            return True
     
-    return False
+    def __init__(self):
+        self.emails = [line.strip() for line in open(settings.DISPOSABLE_EMAIL_DOMAINS)]
     
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        sys.stderr.write("You must supply at least 1 email\n")
+    def chunk(l,n):
+        return (l[i:i+n] for i in xrange(0, len(l), n))
     
-    for email in sys.argv[1:]:
-        if is_disposable_email(email):
-            sys.stderr.write("{email} appears to be a disposable address\n".format(email=email))
+    def is_disposable(self, email):
+        for email_group in self.chunk(self.emails, 20):
+            regex = "(.*" + ")|(.*".join(email_group) + ")"
+            if re.match(regex, email):
+                return True
+    
+        return False
