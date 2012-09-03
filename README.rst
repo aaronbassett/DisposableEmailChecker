@@ -3,31 +3,40 @@ DisposableEmailChecker
 
 Python class for use with Django to detect Disposable Emails. Checks each email against a blacklist of ~890 domains used by various disposable email services.
 
+Installation
+------------
 
-## Installation
-
-    pip install git+ssh://git@github.com/aaronbassett/DisposableEmailChecker.git
+It's an ordinary Python package, just install via ``pip``::
     
-
-Download the example disposable email domains list or create your own and update `settings.py`
-
-    cd /usr/share/
-    wget https://raw.github.com/aaronbassett/DisposableEmailChecker/master/disposable_email_domains.txt
+    $ pip install git+ssh://git@github.com/aaronbassett/DisposableEmailChecker.git
     
-## Required Setting
+Download the example disposable email domains list or create your own and update ``settings.py``::
+
+    $ cd /usr/share/
+    $ wget https://raw.github.com/aaronbassett/DisposableEmailChecker/master/disposable_email_domains.txt
+    
+Required Setting
+----------------
+
+Add the following setting to your Django ``settings.py``::
 
     DISPOSABLE_EMAIL_DOMAINS = "/usr/share/disposable_email_domains.txt"
 
+Usage
+--------
 
-## Usage
+To use the checker in your own scripts::
+
     >>> from disposable_email_checker import DisposableEmailChecker
     
     >>> email_checker = DisposableEmailChecker()
     >>> email_checker.is_disposable("foo@guerrillamail.com")
     True
 
+Using with Django
+-----------------
 
-## Using with Django
+To use the checker during form validation, normally in ``forms.py``::
 
     from django import forms
     from django.utils.translation import ugettext_lazy as _
@@ -44,6 +53,7 @@ Download the example disposable email domains list or create your own and update
     
             return email
 
-## License
+License
+-------
 
 MIT: http://aaron.mit-license.org
