@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "django-disposable-email-checker",
-    version = "0.1.2",
+    version = "0.2.2",
     packages = find_packages(),
     author = "Aaron Bassett",
     author_email = "me@aaronbassett.com",
