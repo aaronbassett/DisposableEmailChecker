@@ -8,7 +8,7 @@ Installation
 
 It's an ordinary Python package, just install via ``pip``::
     
-    $ pip install git+ssh://git@github.com/aaronbassett/DisposableEmailChecker.git
+    $ pip install django-disposable-email-checker
     
 Download the example disposable email domains list or create your own and update ``settings.py``::
 
