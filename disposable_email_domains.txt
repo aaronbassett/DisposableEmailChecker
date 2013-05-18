@@ -17,7 +17,6 @@
 30minutesmail.com
 3126.com
 3d-painting.com
-3g.ua
 4warding.com
 4warding.com 
 4warding.net
@@ -71,7 +70,6 @@ bin-wieder-da.de
 binkmail.com
 bio-muesli.info
 bio-muesli.net
-bk.ru
 bleib-bei-mir.de
 blockfilter.com
 bluebottle.com
@@ -308,7 +306,6 @@ hotpop.com
 hulapla.de
 hush.com
 hushmail.com
-i.ua
 ich-bin-verrueckt-nach-dir.de
 ich-will-net.de
 ieatspam.eu
@@ -317,7 +314,6 @@ ihateyoualot.info
 iheartspam.org 
 imails.info
 imstations.com
-inbox.ru
 inbox2.info
 inboxclean.com
 inboxclean.org
@@ -325,7 +321,6 @@ incognitomail.com
 incognitomail.net
 incognitomail.org
 inerted.com
-inet.ua
 inmail24.com
 insorg-mail.info
 ipoo.org
@@ -379,7 +374,6 @@ liebt-dich.info
 lifebyfood.com
 link2mail.net
 link2mail.net 
-list.ru
 listomail.com
 litedrop.com
 lol.ovpn.to
@@ -394,11 +388,9 @@ maboard.com
 maennerversteherin.com
 maennerversteherin.de
 mail-temporaire.fr
-mail.by
 mail.htl22.at
 mail.mezimages.net
 mail.misterpinball.de
-mail.ru
 mail.svenz.eu
 mail15.com
 mail2rss.org
@@ -510,7 +502,6 @@ netzidiot.de
 netzidiot.de 
 neue-dateien.de
 neverbox.com
-nm.ru
 no-spam.ws
 nobulk.com
 nobulk.com 
@@ -544,7 +535,6 @@ oneoffemail.com
 onewaymail.com
 oopi.org
 oopi.org 
-open.by
 orangatango.com
 ordinaryamerican.net
 otherinbox.com
@@ -798,11 +788,9 @@ trimix.cn
 turboprinz.de
 turboprinzessin.de
 turual.com 
-tut.by
 twinmail.de
 twinmail.de 
 tyldd.com
-ua.fm
 uggsrock.com
 uk2.net
 ukr.net
@@ -867,7 +855,6 @@ xmaily.com
 xmaily.com 
 xoxy.net
 xsecurity.org
-yandex.ru
 yep.it 
 yesey.net
 yogamaven.com
