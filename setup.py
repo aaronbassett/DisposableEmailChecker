@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "django-disposable-email-checker",
-    version = "0.2.3",
+    version = "0.3.0",
     packages = find_packages(),
     author = "Aaron Bassett",
     author_email = "me@aaronbassett.com",
@@ -19,9 +19,12 @@ setup(
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 2 :: Only',
         'Framework :: Django'
     ]
 )

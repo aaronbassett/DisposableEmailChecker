@@ -1,19 +1,19 @@
 DisposableEmailChecker
 ======================
 
-Python class for use with Django to detect Disposable Emails. Checks each email against a blacklist of ~890 domains used by various disposable email services.
+Python class for use with Django to detect Disposable Emails. Checks each email against a blacklist of ~1100 domains used by various disposable email services.
 
 Installation
 ------------
 
-It's an ordinary Python package, just install via ``pip``::
+It's an ordinary Python package, just install via ``pip`` from this repository ::
     
-    $ pip install django-disposable-email-checker
+    $ pip install -U git+https://github.com/artscoop/django-disposable-email-checker
     
 Download the example disposable email domains list or create your own and update ``settings.py``::
 
     $ cd /usr/share/
-    $ wget https://raw.github.com/aaronbassett/DisposableEmailChecker/master/disposable_email_domains.txt
+    $ wget https://raw.github.com/artscoop/django-disposable-email-checker/master/disposable_email_domains.txt
     
 Required Setting
 ----------------
@@ -28,10 +28,14 @@ Usage
 To use the checker in your own scripts::
 
     >>> from disposable_email_checker import DisposableEmailChecker
-    
     >>> email_checker = DisposableEmailChecker()
     >>> email_checker.is_disposable("foo@guerrillamail.com")
     True
+
+If you have already initialized your `DisposableEmailChecker` instance and 
+the domain file content changes, you can refresh the information with::
+
+    >>> email_checker = DisposableEmailChecker(refresh=True)
 
 Using with Django
 -----------------
