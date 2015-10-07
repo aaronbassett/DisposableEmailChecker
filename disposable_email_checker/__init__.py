@@ -17,7 +17,7 @@ class DisposableEmailChecker():
     
     def is_disposable(self, email):
         for email_group in self.chunk(self.emails, 20):
-            regex = "(.*" + ")|(.*".join(email_group) + ")"
+            regex = "(.*" + "$)|(.*".join(email_group) + "$)"
             if re.match(regex, email):
                 return True
     
