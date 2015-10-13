@@ -34,7 +34,7 @@ class DisposableEmailChecker():
 
         if domain_part not in self.whitelist:
             for email_group in self.chunk(self.emails, 20):
-                regex = "(.*" + ")|(.*".join(email_group) + ")"
+                regex = "(.*" + "$)|(.*".join(email_group) + "$)"
                 if re.match(regex, value):
                     raise ValidationError(self.message, code=self.code)
 
