@@ -18,4 +18,13 @@ The full documentation is at https://DisposableEmailChecker.readthedocs.org.
 Quickstart
 ----------
 
-* TODO
+First install the package from pypi
+
+    pip install django-disposable-email-checker
+
+then in your app's models file:
+
+    from disposable_email_checker.fields import DisposableEmailField
+
+    class MyModel(models.Model):
+        email = DisposableEmailField()
