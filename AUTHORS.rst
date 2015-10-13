@@ -10,4 +10,9 @@ Creator
 Contributors
 ------------
 
-None yet. Why not be the first?
+John Sutherland - @sneeu
+Luís Rodrigues - @lfrodrigues
+@Zeioth
+Max Arnold - @max-arnold
+Marcin Zajączkowski - @szpak
+@simaojf
