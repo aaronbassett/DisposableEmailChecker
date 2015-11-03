@@ -257,7 +257,7 @@ def email_domain_loader():
         'dispostable.com',
         'divermail.com',
         'dm.w3internet.co.uk',
-        'dm.w3internet.co.uk example.com',
+        'example.com',
         'docmail.cz',
         'dodgeit.com',
         'dodgit.com',
