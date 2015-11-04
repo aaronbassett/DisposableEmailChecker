@@ -40,13 +40,14 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'six'
+        'six==1.10.0',
+        'block-disposable-email==1.0.1',
     ],
     license="BSD",
     zip_safe=False,
     keywords='DisposableEmailChecker',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Framework :: Django',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
