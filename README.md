@@ -6,11 +6,11 @@ django-disposable-email-checker
 [![PyPI version](https://travis-ci.org/aaronbassett/DisposableEmailChecker.png?branch=master)](https://travis-ci.org/aaronbassett/DisposableEmailChecker)
 [![Requirements Status](https://requires.io/github/aaronbassett/DisposableEmailChecker/requirements.svg?branch=master)](https://requires.io/github/aaronbassett/DisposableEmailChecker/requirements/?branch=master)
 
-Django package to detect ~890 & ~8,600 domains used by disposable email services.
+Django package to detect between ~890 & ~8,600 domains used by disposable email services.
 You can validate any email against our internal list of ~890 domains used by
 disposable email services. Optionally you can also check each domain against
-the [Block-Disposable-Email.com](http://block-disposable-email.com) API. Check out
-their free tier for 200 API calls a month.
+the [Block-Disposable-Email.com](http://block-disposable-email.com) API,
+covering ~8,600 domains.
 
 Setup
 -----
