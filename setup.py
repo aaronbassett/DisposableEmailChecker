@@ -24,14 +24,13 @@ if sys.argv[-1] == 'tag':
     os.system("git push --tags")
     sys.exit()
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+readme = open('README.md').read()
 
 setup(
     name='django-disposable-email-checker',
     version=version,
     description="""Django package to detect ~890 domains used by disposable email services""",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author='Aaron Bassett',
     author_email='aaron@rawtech.io',
     url='https://github.com/aaronbassett/DisposableEmailChecker',
