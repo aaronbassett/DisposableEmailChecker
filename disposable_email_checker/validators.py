@@ -4,6 +4,7 @@ import re
 from six.moves import range
 from django.conf import settings
 from django.utils.encoding import force_text
+from django.core import validators
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import get_callable
@@ -33,6 +34,13 @@ class DisposableEmailChecker():
 
     def __call__(self, value):
         value = force_text(value)
+
+        # Catch invalid emails before we check if they're disposable
+        try:
+            validators.validate_email(value)
+        except ValidationError:
+            return
+
         user_part, domain_part = value.rsplit('@', 1)
 
         if domain_part not in self.whitelist:
