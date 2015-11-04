@@ -23,36 +23,46 @@ The disposable email checker comes with a list of ~890 emails. If you would like
 to provide your own email list create a function which returns a list of domains
 to block.
 
-    from disposable_email_checker.emails import email_domain_loader
+```python
+from disposable_email_checker.emails import email_domain_loader
 
-    def custom_email_domain_loader():
-        # Anyone still using AOL will be too much of a customer service burden
-        return [
-            "aol.com",
-        ] + email_domain_loader()
+def custom_email_domain_loader():
+    # Anyone still using AOL will be too much of a customer service burden
+    return [
+        "aol.com",
+    ] + email_domain_loader()
+```
 
 Then add the complete path including function name to your settings
 
-    DEC_LOADER = "my.package.custom_email_domain_loader"
+```python
+DEC_LOADER = "my.package.custom_email_domain_loader"
+```
 
 If you would like to use the [BDE](http://block-disposable-email.com)
 integration add your API key to your Django settings
 
-    BDEA_APIKEY = "abcnotarealkey123"
+```python
+BDEA_APIKEY = "abcnotarealkey123"
+```
 
 optionally you can configure the BDE API timeout in seconds (default 5)
 
-    BDEA_TIMEOUT = 2
+```python
+BDEA_TIMEOUT = 2
+```
 
 Adding to your models
 ---------------------
 
 Once you have completed setup add the `DisposableEmailField` to your models.
 
-    from disposable_email_checker.fields import DisposableEmailField
+```python
+from disposable_email_checker.fields import DisposableEmailField
 
-    class MyModel(models.Model):
-        email = DisposableEmailField()
+class MyModel(models.Model):
+    email = DisposableEmailField()
+```
 
 The `DisposableEmailField` has a few optional arguments
 
@@ -68,10 +78,12 @@ Using the validator
 
 If you want to use the validator by itself
 
-    from django.core.exceptions import ValidationError
-    from disposable_email_checker.validators import validate_disposable_email
+```python
+from django.core.exceptions import ValidationError
+from disposable_email_checker.validators import validate_disposable_email
 
-    try:
-        validate_disposable_email(email)
-    except ValidationError:
-        pass
+try:
+    validate_disposable_email(email)
+except ValidationError:
+    pass
+```
