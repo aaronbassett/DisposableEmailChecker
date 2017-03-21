@@ -23,6 +23,8 @@ class DisposableEmailChecker():
     def __init__(self, message=None, code=None, whitelist=None):
         if message is not None:
             self.message = message
+        elif hasattr(settings, 'BDEA_MESSAGE'):
+            self.message = getattr(settings, 'BDEA_MESSAGE')
         if code is not None:
             self.code = code
         if whitelist is not None:
