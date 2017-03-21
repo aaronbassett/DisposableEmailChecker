@@ -3,18 +3,31 @@
 language: python
 
 python:
+  - "3.5"
   - "3.4"
   - "3.3"
   - "2.7"
 
 before_install:
-  - pip install codecov
+  - pip install codecov tox
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -r requirements-test.txt
 
 # command to run tests using coverage, e.g. python setup.py test
-script: coverage run --source disposable_email_checker runtests.py
+script: tox
+
+env:
+  - TOXENV=django18-py27
+  - TOXENV=django19-py27
+  - TOXENV=django110-py27
+  - TOXENV=django18-py33
+  - TOXENV=django18-py34
+  - TOXENV=django19-py34
+  - TOXENV=django10-py34
+  - TOXENV=django18-py35
+  - TOXENV=django19-py35
+  - TOXENV=django10-py35
 
 after_success:
   - codecov
