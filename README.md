@@ -52,6 +52,13 @@ optionally you can configure the BDE API timeout in seconds (default 5)
 BDEA_TIMEOUT = 2
 ```
 
+A default error message can be set globally for the validation checking (this is optional and if 
+left blank it will default to `_('Blocked email provider.')`):
+
+```python
+BDEA_MESSAGE = '<blocked email message>'
+```
+
 Adding to your models
 ---------------------
 
