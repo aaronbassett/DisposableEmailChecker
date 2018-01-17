@@ -7,7 +7,8 @@ from django.utils.encoding import force_text
 from django.core import validators
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import get_callable
+# from django.core.urlresolvers import get_callable
+from django.urls import get_callable # Django 2.0 removed urlresolvers
 from bdea.client import BDEAClient
 
 
