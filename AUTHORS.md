@@ -16,3 +16,4 @@ Contributors
 * Max Arnold - @max-arnold
 * Marcin Zajączkowski - @szpak
 * @simaojf
+* Stu Dines - @sjdines
