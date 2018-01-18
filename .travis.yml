@@ -22,6 +22,11 @@ env:
   - TOXENV=django18-py35
   - TOXENV=django19-py35
   - TOXENV=django110-py35
+  - TOXENV=django111-py27
+  - TOXENV=django111-py34
+  - TOXENV=django111-py35
+  - TOXENV=django20-py34
+  - TOXENV=django20-py35
 
 after_success:
   - codecov
