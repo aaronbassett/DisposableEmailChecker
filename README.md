@@ -59,6 +59,22 @@ left blank it will default to `_('Blocked email provider.')`):
 BDEA_MESSAGE = '<blocked email message>'
 ```
 
+There are two modes for emailing matching to determine if the email is considered disposable:
+* Ending with domain
+* Exactly matching domain
+
+For example consider the email address `fake.mcfakerston@edropmail.me` if ending with domain is 
+chosen the `dropmail.me` domain will match the email address as it ends with `dropmail.me` and be
+considered as a disposable email address. If the exactly matching domain is chosen `edropmail.me` 
+does not equal `dropmain.me` and it will not be considered a disposable email address.
+
+By default the option of ending with the domain is used.
+
+To enable exact domain matching add the following to your Django settings:
+```python
+DEC_MATCHING = 'EXACT'
+```
+
 Adding to your models
 ---------------------
 

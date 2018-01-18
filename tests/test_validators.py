@@ -16,9 +16,25 @@ class TestDisposableEmailValidator(TestCase):
         )
         self.not_a_disposable_email = "sergey.brin@google.com"
 
+        self.ends_with_disposable_email = "fake.mcfakerston@a{domain}".format(
+            domain=random.choice(email_domain_loader())
+        )
+
     def test_validator(self):
-        self.assertRaises(ValidationError, validators.validate_disposable_email, self.disposable_email)
+        self.assertRaises(
+            ValidationError,
+            validators.validate_disposable_email,
+            self.disposable_email
+        )
         validators.validate_disposable_email(self.not_a_disposable_email)
+
+        self.assertRaises(
+            ValidationError,
+            validators.validate_disposable_email,
+            self.ends_with_disposable_email
+        )
+        with self.settings(DEC_MATCHING='EXACT'):
+            self.assertIsNone(validators.validate_disposable_email(self.ends_with_disposable_email))
 
     def test_validator_messages(self):
         with self.assertRaisesMessage(ValidationError, 'Blocked email provider.'):

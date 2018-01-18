@@ -58,8 +58,14 @@ class DisposableEmailChecker():
             there was an error contacting BDEA's servers or we did not get a
             hit on BDEA. Basically always check using local list as a backup
             """
+            start_regex = '(.*'
+            base_regex = "$)|(.*"
+            if getattr(settings, 'DEC_MATCHING', False) == 'EXACT':
+                start_regex += '@'
+                base_regex += '@'
+
             for email_group in self.chunk(self.emails, 20):
-                regex = "(.*" + "$)|(.*".join(email_group) + "$)"
+                regex = start_regex + base_regex.join(email_group) + "$)"
                 if re.match(regex, value):
                     raise ValidationError(self.message, code=self.code)
 
@@ -71,5 +77,6 @@ class DisposableEmailChecker():
 
     def chunk(self, l, n):
         return (l[i:i+n] for i in range(0, len(l), n))
+
 
 validate_disposable_email = DisposableEmailChecker()
