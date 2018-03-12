@@ -8,6 +8,8 @@ from django.core import validators
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
+from django.urls import get_callable
+
 from bdea.client import BDEAClient
 
 # Django moved the location of `get_callable` in Django 2.0. We have kept the original import for
