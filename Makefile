@@ -36,7 +36,6 @@ coverage:
 	coverage run --source disposable_email_checker runtests.py tests
 	coverage report -m
 	coverage html
-	open htmlcov/index.html
 
 docs:
 	rm -f docs/DisposableEmailChecker.rst

@@ -7,11 +7,7 @@ try:
     settings.configure(
         DEBUG=True,
         USE_TZ=True,
-        DATABASES={
-            "default": {
-                "ENGINE": "django.db.backends.sqlite3",
-            }
-        },
+        DATABASES={"default": {"ENGINE": "django.db.backends.sqlite3",}},
         INSTALLED_APPS=[
             "django.contrib.auth",
             "django.contrib.contenttypes",
@@ -24,6 +20,7 @@ try:
 
     try:
         import django
+
         setup = django.setup
     except AttributeError:
         pass
@@ -32,13 +29,16 @@ try:
 
 except ImportError:
     import traceback
+
     traceback.print_exc()
-    raise ImportError("To fix this error, run: pip install -r requirements-test.txt Django")
+    raise ImportError(
+        "To fix this error, run: pip install -r requirements-test.txt Django"
+    )
 
 
 def run_tests(*test_args):
     if not test_args:
-        test_args = ['tests']
+        test_args = ["tests"]
 
     # Run tests
     TestRunner = get_runner(settings)
@@ -50,5 +50,5 @@ def run_tests(*test_args):
         sys.exit(bool(failures))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_tests(*sys.argv[1:])

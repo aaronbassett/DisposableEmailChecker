@@ -3,14 +3,18 @@ django-disposable-email-checker
 =============================
 
 [![PyPI version](https://badge.fury.io/py/django-disposable-email-checker.png)](https://pypi.python.org/pypi/django-disposable-email-checker/)
-[![PyPI version](https://travis-ci.org/aaronbassett/DisposableEmailChecker.png?branch=master)](https://travis-ci.org/aaronbassett/DisposableEmailChecker)
-[![Requirements Status](https://requires.io/github/aaronbassett/DisposableEmailChecker/requirements.svg?branch=master)](https://requires.io/github/aaronbassett/DisposableEmailChecker/requirements/?branch=master)
+[![PyPI version](https://travis-ci.org/jheld/DisposableEmailChecker.png?branch=master)](https://travis-ci.org/jheld/DisposableEmailChecker)
+[![Requirements Status](https://requires.io/github/jheld/DisposableEmailChecker/requirements.svg?branch=master)](https://requires.io/github/jheld/DisposableEmailChecker/requirements/?branch=master)
 
 Django package to detect between ~890 & ~8,600 domains used by disposable email services.
 You can validate any email against our internal list of ~890 domains used by
 disposable email services. Optionally you can also check each domain against
 the [Block-Disposable-Email.com](http://block-disposable-email.com) API,
 covering ~8,600 domains.
+
+This code was initially developed at: https://github.com/aaronbassett/DisposableEmailChecker
+However PyPI ownership has been transferred to https://github.com/jheld/DisposableEmailChecker and as such
+all future contributions are expected to be made to the new github repo.
 
 Setup
 -----
@@ -65,6 +69,7 @@ Adding to your models
 Once you have completed setup add the `DisposableEmailField` to your models.
 
 ```python
+from django.db import models
 from disposable_email_checker.fields import DisposableEmailField
 
 class MyModel(models.Model):
@@ -88,6 +93,7 @@ If you want to use the validator by itself
 ```python
 from django.core.exceptions import ValidationError
 from disposable_email_checker.validators import validate_disposable_email
+email = "emailaddress@readmetest.com"  # replace with your own value
 
 try:
     validate_disposable_email(email)

@@ -6,55 +6,48 @@ import sys
 
 import disposable_email_checker
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
 
 version = disposable_email_checker.__version__
 
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    os.system('python setup.py bdist_wheel upload')
+if sys.argv[-1] == "publish":
+    os.system("python setup.py sdist upload")
+    os.system("python setup.py bdist_wheel upload")
     sys.exit()
 
-if sys.argv[-1] == 'tag':
+if sys.argv[-1] == "tag":
     print("Tagging the version on github:")
     os.system("git tag -a %s -m 'version %s'" % (version, version))
     os.system("git push --tags")
     sys.exit()
 
-readme = open('README.md').read()
+readme = open("README.md").read()
 
 setup(
-    name='django-disposable-email-checker',
+    name="django-disposable-email-checker",
     version=version,
     description="""Django package to detect ~890 domains used by disposable email services""",
     long_description=readme,
-    author='Aaron Bassett',
-    author_email='aaron@rawtech.io',
-    url='https://github.com/aaronbassett/DisposableEmailChecker',
-    packages=[
-        'disposable_email_checker',
-    ],
+    author="Jason Held",
+    author_email="jasonsheld@gmail.com",
+    url="https://github.com/jheld/DisposableEmailChecker",
+    packages=["disposable_email_checker",],
     include_package_data=True,
-    install_requires=[
-        'six==1.10.0',
-        'block-disposable-email==1.0.1',
-    ],
+    install_requires=["block-disposable-email==1.0.1",],
     license="BSD",
     zip_safe=False,
-    keywords='DisposableEmailChecker',
+    keywords="DisposableEmailChecker",
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
-        'Framework :: Django',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        "Development Status :: 5 - Production/Stable",
+        "Framework :: Django",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3:: Only",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ],
 )

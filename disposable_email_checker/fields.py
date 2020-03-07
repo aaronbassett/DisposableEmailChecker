@@ -16,7 +16,7 @@ class DisposableEmailField(models.EmailField):
         # As with CharField, this will cause email validation to be performed
         # twice.
         defaults = {
-            'form_class': DisposableEmailFormField,
+            "form_class": DisposableEmailFormField,
         }
         defaults.update(kwargs)
         return super(DisposableEmailField, self).formfield(**defaults)
