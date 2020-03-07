@@ -28,6 +28,7 @@ setup(
     version=version,
     description="""Django package to detect ~890 domains used by disposable email services""",
     long_description=readme,
+    long_description_content_type="text/markdown",
     author="Jason Held",
     author_email="jasonsheld@gmail.com",
     url="https://github.com/jheld/DisposableEmailChecker",
