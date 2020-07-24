@@ -34,7 +34,7 @@ setup(
     url="https://github.com/jheld/DisposableEmailChecker",
     packages=["disposable_email_checker",],
     include_package_data=True,
-    install_requires=["block-disposable-email==1.0.1",],
+    install_requires=["block-disposable-email>=2.0.0",],
     license="BSD",
     zip_safe=False,
     keywords="DisposableEmailChecker",
