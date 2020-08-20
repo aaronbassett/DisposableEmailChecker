@@ -1,6 +1,5 @@
-=============================
 django-disposable-email-checker
-=============================
+===============================
 
 [![PyPI version](https://badge.fury.io/py/django-disposable-email-checker.png)](https://pypi.python.org/pypi/django-disposable-email-checker/)
 [![PyPI version](https://travis-ci.org/aaronbassett/DisposableEmailChecker.png?branch=master)](https://travis-ci.org/aaronbassett/DisposableEmailChecker)
