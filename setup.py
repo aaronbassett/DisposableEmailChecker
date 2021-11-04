@@ -39,7 +39,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'six==1.10.0',
+        'six>=1.10.0',
         'block-disposable-email==1.0.1',
     ],
     license="BSD",
