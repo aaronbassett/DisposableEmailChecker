@@ -9,15 +9,26 @@ matrix:
       env: TOXENV=django22-py36
     - python: 3.6
       env: TOXENV=django30-py36
+    - python: 3.6
+      env: TOXENV=django31-py36
+    - python: 3.6
+      env: TOXENV=django32-py36
     - python: 3.7
       env: TOXENV=django22-py37
     - python: 3.7
       env: TOXENV=django30-py37
+    - python: 3.7
+      env: TOXENV=django31-py37
+    - python: 3.7
+      env: TOXENV=django32-py37
     - python: 3.8
       env: TOXENV=django228-py38
     - python: 3.8
       env: TOXENV=django30-py38
-
+    - python: 3.8
+      env: TOXENV=django31-py38
+    - python: 3.8
+      env: TOXENV=django32-py38
 
 before_install:
   - python -m pip install codecov tox
