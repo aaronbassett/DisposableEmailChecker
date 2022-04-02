@@ -74,8 +74,8 @@ class DisposableEmailChecker(object):
         )
         return get_callable(loader)()
 
-    def chunk(self, l, n):
-        return (l[i : i + n] for i in range(0, len(l), n))
+    def chunk(self, emails, n):
+        return (emails[i : i + n] for i in range(0, len(emails), n))
 
 
 validate_disposable_email = DisposableEmailChecker()
