@@ -653,7 +653,7 @@ def email_domain_loader():
         'mailimate.com',
         'mailin8r.com',
         'mailinater.com',
-        # 'mailinator.com, # ET-2701, Visible uses this in Prod
+        # 'mailinator.com', # ET-2701, Visible uses this in Prod
         'mailinator.gq',
         'mailinator.net',
         'mailinator.org',
