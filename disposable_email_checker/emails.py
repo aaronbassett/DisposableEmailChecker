@@ -110,7 +110,7 @@ def email_domain_loader():
         'armyspy.com',
         'asdasd.nl',
         'autosfromus.com',
-        'aver.com',
+        'aver.com', # ET-2760, Visible uses this in Prod with naver.com
         'azmeil.tk',
         'baldmama.de',
         'baldpapa.de',
