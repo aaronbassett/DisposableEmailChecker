@@ -110,7 +110,7 @@ def email_domain_loader():
         'armyspy.com',
         'asdasd.nl',
         'autosfromus.com',
-        #'aver.com', # ET-2760, Visible uses this in Prod with naver.com
+        'aver.com',
         'azmeil.tk',
         'baldmama.de',
         'baldpapa.de',
@@ -1218,7 +1218,7 @@ def email_domain_loader():
         'xsecurity.org',
         'xyzfree.net',
         'yapped.net',
-        'yeah.net',
+        #'yeah.net', # ET-2770, Visible uses this in Prod
         'yep.it',
         'yert.ye.vc',
         'yesey.net',
