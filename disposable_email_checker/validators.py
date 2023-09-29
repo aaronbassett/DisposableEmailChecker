@@ -60,7 +60,7 @@ class DisposableEmailChecker():
             hit on BDEA. Basically always check using local list as a backup
             """
             for email_group in self.chunk(self.emails, 20):
-                if value in email_group:
+                if domain_part in email_group:
                     raise ValidationError(self.message, code=self.code)
 
     def _load_emails(self):
